@@ -1,0 +1,17 @@
+
+public class intByteTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = 5;
+		int y = 10;
+		
+		int count = 0;
+        int xor = x ^ y;
+		
+		System.out.println(xor);
+		
+	}
+
+}

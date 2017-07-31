@@ -1,0 +1,17 @@
+
+public class intByteTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = 5;
+		int y = 10;
+		
+		String xx = Integer.toBinaryString(x);
+		byte yy = (byte) y;
+		
+		System.out.println(xx);
+		System.out.println(yy);
+	}
+
+}

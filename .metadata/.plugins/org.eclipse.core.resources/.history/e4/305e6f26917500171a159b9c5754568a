@@ -1,0 +1,61 @@
+import java.util.*;
+
+public class FindAllAnagramsInAString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String s = "cbaebabacd";
+		String p = "abc";
+		List<Integer> res = new ArrayList<>();
+		
+		int[] hash = new int[26];
+		
+		for(char val : p.toCharArray()) {
+			hash[val - 'a']++;
+		}
+		dis(hash);
+		
+		int count = p.length();
+		int left = 0;
+		int right = 0;
+		
+		while (right < p.length()) {
+			if (hash[s.charAt(right) - 'a'] >= 1) {
+				count--;
+			}
+			dis(hash);
+			hash[s.charAt(right) - 'a']--;
+			right++;
+			
+			if (count == 0) {
+				res.add(left);
+			}
+			
+			if (right  - left == p.length()) {
+				if (hash[s.charAt(left) - 'a'] >= 0) {
+                    count++;
+                }
+                hash[s.charAt(left) - 'a']++;
+                left++;
+			}
+		}
+	
+		System.out.println("Results: ");
+		for (Integer val : res) {
+			System.out.print(val + " ");
+		}
+		
+		
+		
+	}
+	
+	public static void dis(int[] hash) {
+		for (int val : hash) {
+			System.out.print(val + " | ");
+		}
+		System.out.println();
+		System.out.println("------------------------------------------------------------");
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class intByteTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s = "Hello world this is it";
+		String[] ss = s.split(" ");
+		
+		for (int i = 0; i < ss.length; i++) {
+			System.out.println(ss[i].indexOf(int 0));
+		}
+		
+		
+	}
+
+}

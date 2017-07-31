@@ -1,0 +1,10 @@
+package Lesson05;
+
+public class ListIteratorExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

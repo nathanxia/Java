@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashMap<Integer, Integer> map = new HashMap<>();
+		
+		if (!map.get(7)) {
+			System.out.println("hah");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		Map<Integer, Integer> map = new HashMap<>();
+		
+		ArrayList<Integer> arr = new ArrayList<>();
+		map.put(50, 6);
+		map.put(60, 1);
+		map.put(70, 1);
+		map.put(80, 1);
+		map.put(90, 1);
+		
+		//System.out.println(map.get(50));
+		
+		for (Integer entry : map.values()) {
+            System.out.println(entry);
+            
+            
+        }
+		//int[] a = arr.toArray(new int[arr.size()]);
+		*/
+		
+	} // End of Main;
+
+}

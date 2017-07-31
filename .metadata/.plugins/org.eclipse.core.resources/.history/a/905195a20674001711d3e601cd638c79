@@ -1,0 +1,56 @@
+import java.util.*;
+import java.util.Map.Entry;
+
+import javax.xml.stream.events.Characters;
+
+
+
+public class Test {
+
+	public static void insertValue(int[] newarr, int[] arr, int i) {
+		
+		System.out.println("index: " + i);
+		if (i < arr.length - 1) {
+			insertValue(newarr, arr, i + 1);
+			System.out.println("Get out of index " + (i + 1));
+		}
+		
+		System.out.println("insert index " + i + " with value " +  arr[i]);
+		newarr[arr.length - 1 - i] = arr[i];
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//System.out.println(Math.min(a, b));
+		int a = -4;
+		System.out.println(a >>> 28);
+		
+		
+		
+		
+		
+	
+	} // End of Main;
+	
+	public static String reverse(String[] arr, int i) {
+		
+		if(i == arr.length - 1) {
+			return arr[i];
+		}
+		System.out.println("|"+arr[i]+"|");
+		String ss = reverse(arr, i + 1);
+		if (!arr[i].equals("")) {
+			ss = ss + " " + arr[i];
+		}
+		return ss;
+	}
+
+	public static void display(char[] arr) {
+		System.out.print("| ");
+		for (char val : arr) {
+			System.out.print(val + " | ");
+		}
+		System.out.println();
+	}
+}

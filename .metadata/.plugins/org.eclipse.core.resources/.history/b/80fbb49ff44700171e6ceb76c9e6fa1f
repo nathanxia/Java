@@ -1,0 +1,14 @@
+package NestingAndOverloading;
+
+public class Turorials {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Test t = new Test();
+		
+		int result = t.max(5, 7);
+		System.out.print(result);
+	}
+
+}
