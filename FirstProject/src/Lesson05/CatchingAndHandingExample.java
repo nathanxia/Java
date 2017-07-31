@@ -13,6 +13,7 @@ public class CatchingAndHandingExample {
 		// try catch function;
 		try {
 			int b = a / 2;
+			System.out.println(b);
 		}catch(Exception e) {
 			System.out.println(e);
 		}
@@ -20,6 +21,7 @@ public class CatchingAndHandingExample {
 		// try catch finally;
 		try {
 			int b = a / 0;
+			System.out.println(b);
 		}catch(Exception e) {
 			System.out.println("catch called.");
 			System.out.println(e);

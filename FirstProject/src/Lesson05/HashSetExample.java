@@ -15,8 +15,7 @@ public class HashSetExample {
 		names.add("Tonny");
 		names.add("Patrick");
 		
-		Iterator<String> itr = names.iterator();
-		
+	
 		
 		
 		
