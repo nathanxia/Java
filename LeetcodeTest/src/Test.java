@@ -1,8 +1,3 @@
-import java.util.*;
-import java.util.Map.Entry;
-
-import javax.xml.stream.events.Characters;
-
 
 
 public class Test {
@@ -23,10 +18,7 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		//System.out.println(Math.min(a, b));
-		List<Integer> list = new LinkedList<>();
-		
-		char a= 'a';
-		
+		//List<Integer> list = new LinkedList<>();
 		
 		
 		
