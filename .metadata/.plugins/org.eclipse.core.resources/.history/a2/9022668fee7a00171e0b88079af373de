@@ -1,0 +1,29 @@
+package Lesson02;
+
+public class Hero {
+	
+	public String name;
+	private int strength;
+	public int speed;
+	public int health;
+	
+	public Hero(String name) {
+		this.name = name;
+	}
+	
+	public int getStrength() {
+		return strength;
+	}
+
+	private void generateAbilities() {
+
+	}
+	
+	public void fight() {
+		
+	}
+	
+	public void run() {
+		
+	}
+}

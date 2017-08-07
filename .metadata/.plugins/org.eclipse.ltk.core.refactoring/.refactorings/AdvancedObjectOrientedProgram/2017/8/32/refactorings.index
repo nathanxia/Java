@@ -1,2 +1,17 @@
 1502049571088	Delete element
 1502049584682	Delete element
+1502054094111	Rename type 'Thursday'
+1502054973420	Encapsulate field 'strength'
+1502055068481	Encapsulate field 'speed'
+1502055090717	Encapsulate field 'health'
+1502056721553	Delete element
+1502074276901	Encapsulate field 'numWheels'
+1502074283677	Encapsulate field 'numDoors'
+1502074290082	Encapsulate field 'color'
+1502074339293	Encapsulate field 'make'
+1502074364500	Encapsulate field 'model'
+1502074369537	Encapsulate field 'year'
+1502076250702	Encapsulate field 'load'
+1502078293410	Rename type 'SportsUtilityVehcile'
+1502078336492	Delete element
+1502078382474	Delete element

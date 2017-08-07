@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package Lesson03;
+
+/**
+ * @author Nathan
+ *
+ */
+public class SportsUtilityVehicle {
+
+	/**
+	 * 
+	 */
+	public SportsUtilityVehicle() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,7 @@
+package Lesson02;
+
+public interface ActionInterface {
+	
+	void fights();
+
+}

@@ -1,0 +1,9 @@
+package Lesson02;
+
+public interface ActionInterface {
+	
+	public void fights();
+	
+	public void runs();
+
+}

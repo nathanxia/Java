@@ -1,0 +1,17 @@
+package Lesson02;
+
+public class Project {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Hero superman = new Hero("Superman", 21);
+		superman.showAbilities();
+		
+		Villain villain = new Villain("Sly Man", 20);
+		villain.run();
+		villain.steals();
+		villain.showAbilities();
+	}
+
+}

@@ -1,0 +1,15 @@
+package Lesson03;
+
+public class SportsUtilityVehicle extends Vehicle {
+
+	public SportsUtilityVehicle(int wheels, int doors, String color, String make, String model, String year) {
+		super(wheels, doors, color, make, model, year);
+		// TODO Auto-generated constructor stub
+	}
+
+	public SportsUtilityVehicle(String color, String make, String model, String year) {
+		super(color, make, model, year);
+		// TODO Auto-generated constructor stub
+	}
+
+}

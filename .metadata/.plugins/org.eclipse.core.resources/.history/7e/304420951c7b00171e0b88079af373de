@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package Lesson03;
+
+/**
+ * @author Nathan
+ *
+ */
+public class Project {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Vehicle myBMW = new Vehicle(4, 4, "White", "BMW", "X5", "2017");
+		
+	}
+
+}

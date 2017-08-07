@@ -1,0 +1,11 @@
+package Lesson03;
+
+public class Vehicle {
+
+	int numWheels = 4;
+	
+	
+	public Vehicle() {
+		
+	}
+}

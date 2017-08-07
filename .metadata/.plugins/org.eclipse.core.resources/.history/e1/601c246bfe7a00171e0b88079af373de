@@ -1,0 +1,15 @@
+package Lesson02;
+
+public class Speedster extends Hero {
+
+	public Speedster(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+	
+	// Private methods;
+	private void boostSpeed() {
+		this.speed += 50;
+	}
+
+}
