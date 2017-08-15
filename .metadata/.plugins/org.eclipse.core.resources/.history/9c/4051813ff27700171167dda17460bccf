@@ -7,7 +7,7 @@ public class test {
 		int a = 10;
 		long b = 10;
 		double c = 5.5;
-		float d = (float) 5.5;
+		float d = (float) 5.6;
 		
 		System.out.println(((a + b) * (c +d)));
 		

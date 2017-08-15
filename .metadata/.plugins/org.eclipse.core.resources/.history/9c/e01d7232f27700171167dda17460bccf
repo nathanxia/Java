@@ -4,10 +4,15 @@ public class test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		List<Integer> list = new ArrayList<>();
+		int a = 5;
+		long b = 10;
+		double c = 5.5;
+		float d = (float) 25.6;
 		
-		Map<Character, Integer> map = new HashMap<>();
-	
+		System.out.println(((a + b) * (c +d)));
+		
+		
+
 	}
 
 }
