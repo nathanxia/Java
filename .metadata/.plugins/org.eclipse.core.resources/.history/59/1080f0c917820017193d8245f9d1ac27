@@ -1,0 +1,109 @@
+import java.util.*;
+public class Maze {
+
+	int x;
+	int y;
+	int val;
+		
+	public Maze(int i, int j, int val) {
+		this.x = i;
+		this.y = j;
+		this.val = val;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		char[][] maze1 = {
+				{'s', '-', 's'},
+				{'x', 'x', '-'},
+				{'e', '-', '-'}
+		};
+		
+		char[][] maze2 = {
+				{'s', '-', '-', '-', '-', '-', '-', '-', '-', '-'},	
+				{'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', '-'},	
+				{'-', '-', '-', '-', '-', '-', '-', '-', 'x', '-'},	
+				{'-', 'x', 'x', 'x', 'x', 'x', 'x', '-', 'x', '-'},
+				{'-', 'x', 'e', 'x', 'x', '-', '-', '-', 'x', '-'},
+				{'-', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', '-'},
+				{'-', '-', '-', '-', '-', '-', '-', '-', '-', '-'},
+				{'x', 'x', 'x', '-', 'x', 'x', '-', 'x', 'x', '-'},
+				{'-', '-', 'x', '-', '-', '-', '-', '-', '-', '-'},	
+		};
+		
+		Queue<Maze> queue = new LinkedList<>();
+		int l = maze2.length;
+		int[][] maze = new int[l][l];
+		
+		for (int i = 0; i < l; i++) {
+			for (int j = 0; j < l; j++) {
+				if(maze2[i][j] == 's') {
+					maze[i][j] = 0;
+				}
+				else if(maze2[i][j] == 'e') {
+					maze[i][j] = -3;
+				}
+				else if(maze2[i][j] == '-') {
+					maze[i][j] = -1;
+				}
+				else {
+					maze[i][j] = -2;
+				}
+			}
+		}
+		
+		Maze tmp = new Maze(0, 0, 0);
+		tmp.val = 0;
+		queue.add(tmp);
+		
+		BFS(maze, queue, l);
+		
+		display(maze, l);
+	}
+	
+	public static void BFS(int[][] maze, Queue<Maze> queue, int l) {
+		if (queue.isEmpty()) return;
+		
+		Maze first = queue.poll();
+		
+		if (first.x - 1 > 0 && maze[first.x - 1][first.y] == -1) {
+			 maze[first.x - 1][first.y] = first.val + 1;
+			 Maze point = new Maze(first.x - 1, first.y, maze[first.x - 1][first.y]);
+			 queue.add(point);
+			 
+		}
+		if (first.x + 1 < l && maze[first.x + 1][first.y] == -1) {
+			 maze[first.x + 1][first.y] = first.val + 1;
+			 Maze point = new Maze(first.x + 1, first.y, maze[first.x + 1][first.y]);
+			 queue.add(point);
+			 
+		}
+		if (first.y - 1 > 0 && maze[first.x][first.y - 1] == -1) {
+			 maze[first.x][first.y - 1] = first.val + 1;
+			 Maze point = new Maze(first.x, first.y - 1, maze[first.x][first.y - 1]);
+			 queue.add(point);
+			 
+		}
+		if (first.y + 1 < l && maze[first.x][first.y + 1] == -1) {
+			 maze[first.x][first.y + 1] = first.val + 1;
+			 Maze point = new Maze(first.x, first.y + 1, maze[first.x][first.y + 1]);
+			 queue.add(point);
+		}
+		
+		BFS(maze, queue, l);
+		
+		
+	}
+	
+	public static void display (int[][] maze, int l) {
+		for (int i = 0; i < l; i++) {
+			for (int j = 0; j < l; j++) {
+				System.out.print(maze[i][j]);
+			}
+			System.out.println();
+		}
+	}
+
+}
