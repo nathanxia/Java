@@ -15,6 +15,7 @@ public class Maze {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		// change the to maze1 for testing.
 		char[][] maze2 = {
 				{'s', '-', '-'},
 				{'x', 'x', '-'},
