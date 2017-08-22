@@ -11,8 +11,9 @@ public class test {
 		
 		System.out.println(((a + b) * (c +d)));
 		
+		Stack<Integer> stack = new Stack();
 		
-
-	}
+		
+		PriorityQueue<Integer> queue = new PriorityQueue();
 
 }
