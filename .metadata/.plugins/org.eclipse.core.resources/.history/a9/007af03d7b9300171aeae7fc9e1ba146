@@ -44,6 +44,7 @@ public class GetKClosestPoint {
 		GetKClosestPoint[] res = new GetKClosestPoint[k];
 		
 		Arrays.sort(points, new Comparator<GetKClosestPoint>() {
+			@Override
 			public int compare(GetKClosestPoint a, GetKClosestPoint b) {
 		        return (distance(a) - distance(b));
 		    }
