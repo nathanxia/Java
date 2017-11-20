@@ -1,0 +1,58 @@
+package google;
+
+import java.util.*;
+
+public class quickSort {
+	
+	/*
+	 * O(nlogn) - average case running time.
+	 * O(n^2) - worst case running time.
+	 * In-place.
+ 	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {3, 5, 45, 234, 123, 456, 2, 74, 654, 8, 11};
+		
+		quickSrt(arr, 0, arr.length - 1);
+		
+		for (int v : arr) {
+			System.out.print(v + " | ");
+		}
+		
+	}
+	
+	public static void quickSrt(int[] arr, int left, int right) {
+		if (left > right) {
+			return;
+		}
+		
+		int pvit = left + (right - left) / 2;
+		int idx = partion(arr, left, right, pvit);
+		quickSrt(arr, left, idx);
+		quickSrt(arr, idx + 1, right);
+		
+	}
+	
+	public static int partion(int[] arr, int left, int right, int pvit) {
+		
+		while(left <= right) {
+			while(arr[left] <= pvit) left++;
+			while(arr[right] >= pvit) right--;
+			
+			if (arr[left] >= arr[right]) {
+				int tmp = arr[left];
+				arr[left] = arr[right];
+				arr[right] = tmp;
+				left++;
+				right--;
+			}
+			
+			
+		}
+		
+		
+		return left;
+	}
+	
+
+}

@@ -3,7 +3,7 @@ public class LongestPalindromicSubstring {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "babad";
+		String s = "abbaccffggffccafdghy";
 		
 		String res = longestPalindromicSubstring(s);
 		
@@ -24,13 +24,15 @@ public class LongestPalindromicSubstring {
 			//System.out.println("===================");
 			
 			int len = Math.max(l1, l2);
+			System.out.println(len);
 			if (len > end - start) {
 				start = i - (len - 1) / 2;
 				end = i + len / 2;
 			}
 			
 		}
-		
+		System.out.println(start);
+		System.out.println(end);
 		
 		return s.substring(start, end + 1);
 	}

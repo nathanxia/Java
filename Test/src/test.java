@@ -1,14 +1,13 @@
 import java.util.*;
+
 public class test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		List<Integer> list = new ArrayList<>();
+		Map<Integer, String> map = new HashMap<>();
+		String s = "asdfg";
+		System.out.println(s.substring(1, 3));
 		
-		Map<Character, Integer> map = new HashMap<>();
-	
-
 	}
 
 }

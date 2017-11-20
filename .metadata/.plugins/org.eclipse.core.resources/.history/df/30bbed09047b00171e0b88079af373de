@@ -1,9 +1,0 @@
-package Lesson02;
-
-public interface ActionInterface {
-	
-	public void fight();
-	
-	public void run();
-
-}

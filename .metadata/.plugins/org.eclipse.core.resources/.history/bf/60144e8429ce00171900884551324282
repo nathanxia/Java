@@ -1,0 +1,10 @@
+package google;
+
+public class mergeSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {3, 5, 45, 234, 123, 456, 2, 74, 654, 8, 11};
+	}
+
+}
