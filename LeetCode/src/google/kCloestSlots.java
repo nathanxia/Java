@@ -6,8 +6,8 @@ public class kCloestSlots {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] flowers = {2,4,3,1,5};
-		int k = 2;
+		int[] flowers = {1,2,3};
+		int k = 1;
 		
 		int res = findKClosetSlots(flowers, k);
 		
@@ -46,10 +46,10 @@ public class kCloestSlots {
                 }
             }
             
-            if (rightCheck && pos + K == n) {
+            if (rightCheck && right[pos + K] == 1) {
                 return i + 1;   
             }
-            if (leftCheck && pos - K + 1== 0) {
+            if (leftCheck && left[pos - K] == 1) {
                 return i + 1;
             }
             
