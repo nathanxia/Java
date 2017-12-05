@@ -13,9 +13,6 @@ public class test {
 				System.out.println(v2);
 			}
 		}
-		
-		String s = "abcdef";
-		System.out.println(s.startsWith("bc", 1));
 			
 	}
 }
