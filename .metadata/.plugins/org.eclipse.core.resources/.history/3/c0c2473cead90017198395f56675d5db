@@ -16,8 +16,6 @@ public class test {
 		
 		String s = "abcdef";
 		System.out.println(s.startsWith("bc", 1));
-		
-		s.idex
 			
 	}
 }
