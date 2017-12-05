@@ -9,7 +9,8 @@ public class backSpaceString {
 		String s2 = "abcde<e<f";
 		
 		System.out.println(backSpace(s1).equals(backSpace(s2)));
-
+		
+		
 	}
 	
 	public static String backSpace(String s) {
