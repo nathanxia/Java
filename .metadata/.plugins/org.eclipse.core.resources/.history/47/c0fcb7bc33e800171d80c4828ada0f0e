@@ -1,0 +1,38 @@
+package google;
+import java.util.*;
+
+public class Trie {
+
+	private class TrieNode {
+		Map<Character, TrieNode> children;
+		boolean end;
+		public TrieNode() {
+			children = new HashMap<>();
+			end = false;
+		}
+	}
+	
+	private static TrieNode root;
+	
+	public Trie() {
+		root = new TrieNode();
+	}
+	
+	public static void addWord(String word) {
+		TrieNode current = root;
+		for (Character c : word.toCharArray()) {
+			if (!current.children.containsKey(c)) {
+				TrieNode newNode = new TrieNode();
+				current.children.put(c, newNode);
+			}
+			current = current.children.get(c);
+		}
+		current.end = true;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

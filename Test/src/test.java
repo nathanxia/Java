@@ -19,6 +19,5 @@ public class test {
 		
 		HashMap<String, String> map = new HashMap<>();
 		
-			
 	}
 }
