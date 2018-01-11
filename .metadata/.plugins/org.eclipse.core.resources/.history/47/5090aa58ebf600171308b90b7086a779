@@ -1,0 +1,58 @@
+package google;
+
+import java.util.*;
+
+public class wordRandomPick {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Map<Character, Integer> map = new HashMap<>();
+		
+		map.put('a', 5);
+		map.put('b', 5);
+		map.put('d', 2);
+		map.put('c', 3);
+		map.put('e', 8);
+		
+		int[] weights =  new int[map.size() + 1];
+		char[] keys = new char[map.size() + 1];
+		int sum = 0;
+		int i = 1;
+		for (Character key : map.keySet()) {
+			sum += map.get(key);
+			weights[i] = sum;
+			keys[i] = key;
+			i++;
+		}
+		
+		Random rmd = new Random();
+		int pick = rmd.nextInt(sum);
+		System.out.println(pick);
+		
+		int left = 0;
+		int right = weights.length - 1;
+		while (left < right && left != right - 1) {
+			
+			int mid = left + (right - left) / 2;
+			if (pick > weights[mid]) {
+				left = mid;
+			}
+			else {
+				right = mid - 1;
+			}
+		}
+		
+		System.out.println(left + " - " + right);
+		if (pick == weights[left]) {
+			System.out.println("Random pick: " + map.get(weights[left + 1] - weights[left]));
+		}
+		else {
+			System.out.println("Random pick: " + map.get(weights[right] - weights[right - 1]));
+		}
+		
+	}
+	
+	
+
+}
