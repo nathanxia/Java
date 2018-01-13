@@ -1,0 +1,35 @@
+package google;
+
+import java.util.*;
+public class tableSitDistance implements Comparable<tableSitDistance> {
+	
+	
+		int dist;
+		int num;
+		
+		public tableSitDistance(int dist, int num) {
+			this.dist = dist;
+			this.num = num;
+		}
+		
+		public int compareTo(tableSitDistance d) {
+			return (this.dist - d.dist);
+		}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		PriorityQueue<tableSitDistance> que = new PriorityQueue<>(Collections.reverseOrder());
+		
+		int[] gas = {1,4,7,12,34,45,78,99};
+		
+		for (int i = 1; i < gas.length; i++) {
+			que.add(new tableSitDistance(gas[i] - gas[i - 1], 1));
+		}
+		
+		System.out.println(que.peek().dist + " - " + que.peek().num);
+	}
+
+}
