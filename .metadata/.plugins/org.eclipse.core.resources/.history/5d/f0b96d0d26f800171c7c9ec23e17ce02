@@ -4,11 +4,11 @@ public class smallestDistance {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//String[] tagList = {"made", "weather", "forecast", "says", "that", "made", "rain", "in", "spain", "stays"};
-		//String[] targetList = {"made", "in", "spain"};
+		String[] tagList = {"made", "weather", "forecast", "says", "that", "made", "rain", "in", "spain", "stays"};
+		String[] targetList = {"made", "in", "spain"};
 		
-		String[] tagList = {"dbc", "2abc", "cab", "bcd", "bcb"};
-		String[] targetList = {"2abc", "bcd", "cab"};
+		//String[] tagList = {"dbc", "2abc", "cab", "bcd", "bcb"};
+		//String[] targetList = {"2abc", "bcd", "cab"};
 		
 		//String[] tagList = {"the", "spain", "that", "the", "rain", "in", "spain", "stays", "forecast", "in", "the"};
 		//String[] targetList = {"in", "the", "spain"};
@@ -45,7 +45,6 @@ public class smallestDistance {
 			
 			while (count == targetList.length) {
 				if (min > r - l) {
-					System.out.println(l + " - " + (r - 1));
 					min = r - l;
 					res[0] = l;
 					res[1] = r - 1;

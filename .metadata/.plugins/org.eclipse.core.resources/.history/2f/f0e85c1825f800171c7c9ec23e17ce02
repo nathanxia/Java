@@ -10,11 +10,6 @@ public class smallestDistance {
 		String[] tagList = {"dbc", "2abc", "cab", "bcd", "bcb"};
 		String[] targetList = {"2abc", "bcd", "cab"};
 		
-		//String[] tagList = {"the", "spain", "that", "the", "rain", "in", "spain", "stays", "forecast", "in", "the"};
-		//String[] targetList = {"in", "the", "spain"};
-		
-		
-		
 		int[] res = findSmallestDistance(tagList, targetList);
 		
 		System.out.println(res[0] + " : " + res[1]);
@@ -35,7 +30,6 @@ public class smallestDistance {
 		int count = 0;
 		
 		while (r < tagList.length) {
-			System.out.println(map);
 			String v = tagList[r];
 			if (map.getOrDefault(v, 0) > 0) {
 				count++;
@@ -45,10 +39,9 @@ public class smallestDistance {
 			
 			while (count == targetList.length) {
 				if (min > r - l) {
-					System.out.println(l + " - " + (r - 1));
 					min = r - l;
 					res[0] = l;
-					res[1] = r - 1;
+					res[1] = r;
 				}
 				
 				map.put(tagList[l], map.getOrDefault(tagList[l], 0) + 1);
@@ -58,7 +51,10 @@ public class smallestDistance {
 				l++;
 			}
 		}
+		
+		
 		return res;
+		
 	}
 
 }
