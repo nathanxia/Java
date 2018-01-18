@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class test {
+
+	public static void main(String[] args) {
+		
+		
+		ArrayList<Integer> res = new ArrayList<>();
+		
+		int N = 100000;
+		int i = 0;
+		int j = 0;
+		int last = 0;
+		while ( last < N) {
+			
+			int two = (int)(Math.pow(2, i + 1) * Math.pow(5, j));
+			int five = (int)(Math.pow(2, i) * Math.pow(5, j + 1));
+			if (two > five) {
+				res.add(five);
+				j++;
+			}
+			else {
+				res.add(two);
+				i++;
+			}
+			last = res.get(res.size() - 1);
+			
+			System.out.println(last);
+		}
+	}
+}

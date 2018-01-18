@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class test {
+
+	public static void main(String[] args) {
+		
+		
+		PriorityQueue<Integer> res = new PriorityQueue<>();
+		
+		int N = 100000;
+		int tmp = 0;
+		int i = 0;
+		int j = 0;
+		while (tmp < N) {
+			tmp = (int) (Math.pow(2, i) * Math.pow(5, j));
+			if (i < j) {
+				j++;
+			}
+			else {
+				i++;
+			}
+			
+			System.out.println(i + " - " + j + " - " + tmp);
+		}
+	}
+}

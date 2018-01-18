@@ -1,0 +1,106 @@
+package google;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class boxesSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		arrayFormat();
+		
+	}
+	
+	public class rect implements Comparable<rect> {
+		public int l;
+		public int h;
+		public int w;
+		public rect() {
+			this.l = 0;
+			this.h = 0;
+			this.w = 0;
+		}
+		
+		public void add(int l, int h, int w) {
+			this.l = l;
+			this.w = w;
+			this.h = h;
+		}
+
+		@Override
+		public int compareTo(rect r) {
+			// TODO Auto-generated method stub
+			if (this.l == r.l) {
+				if (this.w == r.w) {
+					return this.h - r.h;
+				}
+				return this.w - r.w;
+			}
+			return this.l - r.l;
+		}
+	}
+	
+	public static rect[] boxes = new rect[5];
+	
+	public static void classFormat() {
+		//int[][] box = {{4,5,6}, {1,2,3}, {3,4,5}, {4,6,5}, {7,9,8}};
+		boxes[0].add(4, 5, 6);
+		boxes[1].add(1, 2, 3);
+		boxes[2].add(3, 4, 5);
+		boxes[3].add(4, 6, 5);
+		boxes[4].add(7, 9, 8);
+		
+		System.out.println(boxes[0].h + boxes[0].l + boxes[0].w);
+	}
+	
+	public static void arrayFormat() {
+		System.out.println("Array format");
+		int[][] box = {{4,5,6}, {1,2,3}, {3,4,5}, {4,6,5}, {7,9,8}};
+		
+		// Cant switch.
+		System.out.println("Can not switch edges: ");
+		Arrays.sort(box, new Comparator<int[]>() {
+			public int compare(int[] a, int[] b) {
+				if (a[0] == b[0]) {
+					if (a[1] == b[1]) {
+						return a[2] - b[2];
+					}
+					return a[1] - b[1];
+				}
+				return a[0] - b[0];
+			}
+		});
+		
+		display(box);
+		
+		// can switch;
+		System.out.println("Can switch edges: ");
+		for (int i = 0; i < box.length; i++) {
+			Arrays.sort(box[i]);
+		}
+		
+		Arrays.sort(box, new Comparator<int[]>() {
+			public int compare(int[] a, int[] b) {
+				if (a[0] == b[0]) {
+					if (a[1] == b[1]) {
+						return a[2] - b[2];
+					}
+					return a[1] - b[1];
+				}
+				return a[0] - b[0];
+			}
+		});
+		
+		display(box);
+	}
+	
+	public static void display(int[][] box) {
+		for (int[] b : box) {
+			System.out.print("{"+ b[0] + b[1] + b[2] + "}");
+		}
+		System.out.println();
+	}
+
+}
