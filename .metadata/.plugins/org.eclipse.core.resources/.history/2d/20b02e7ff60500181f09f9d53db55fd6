@@ -1,0 +1,23 @@
+import java.util.*;
+
+class Shape {}
+class Quadrilateral extends Shape {}
+class Triangle extends Shape{}
+
+
+
+public class test {
+
+	static Shape shape = new Quadrilateral();
+	static Quadrilateral quadrilateral = new Quadrilateral();
+	
+	public static void main(String arg[]) {
+		
+		Triangle tri = (Triangle)quadrilateral;
+    }
+    
+	
+	
+	
+	
+}

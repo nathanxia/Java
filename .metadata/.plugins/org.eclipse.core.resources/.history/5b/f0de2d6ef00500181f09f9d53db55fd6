@@ -1,0 +1,24 @@
+
+import java.util.*;
+
+public class test {
+	
+	public static class Invoice {
+		   public static String formatId(String oldId) {
+		      return oldId + "_Invoice";
+		   }
+		}
+
+	public static class SalesInvoice extends Invoice {
+		   public static String formatId(String oldId) {
+		      return oldId + "_SalesInvoice";
+		   }
+		}
+
+	public static void main(String[] args) {
+		
+		SalesInvoice invoice = new SalesInvoice();
+		System.out.println(invoice.formatId("1234"));
+	}
+	
+}
