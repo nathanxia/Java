@@ -3,17 +3,15 @@ import java.util.*;
 
 
 
+
 public class test {
    
     public static void main (String [] args) {
-    	Set<String> set = new LinkedHashSet<String>();
-        set.add("3");
-        set.add("1");
-        set.add("3");
-        set.add("2");
-        set.add("3");
-        set.add("1");
-        set.forEach(s -> System.out.print(s+"-"));
-
+    	List<Character> list = new ArrayList<>();
+ 
+    	list.add('a');
+    	System.out.println(list.contains('a'));
+    	list.remove(list.indexOf('a'));
+    	System.out.println(list.contains('a'));
     }
 }
