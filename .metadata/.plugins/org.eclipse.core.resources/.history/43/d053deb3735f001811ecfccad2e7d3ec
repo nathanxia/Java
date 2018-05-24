@@ -6,7 +6,7 @@ public class backSpaceString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s1 = "abcde<<<<f";
-		String s2 = "face<<f";
+		String s2 = "abce<<f";
 		
 		System.out.println(backSpace(s1).equals(backSpace(s2)));
 		System.out.println(backSpace2(s1, s2));

@@ -5,8 +5,8 @@ public class backSpaceString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s1 = "abcde<<<<f";
-		String s2 = "face<<f";
+		String s1 = "abcde<f<f";
+		String s2 = "abcde<e<f";
 		
 		System.out.println(backSpace(s1).equals(backSpace(s2)));
 		System.out.println(backSpace2(s1, s2));
@@ -42,7 +42,7 @@ public class backSpaceString {
 		int backB = 0;
 		
 		while (i >= 0 && j >= 0) {
-			//System.out.println(a[i] + " : " + b[j]);
+			System.out.println(i + " : " + j);
 		
 			if (a[i] == '<') {
 				backA++;
@@ -68,16 +68,13 @@ public class backSpaceString {
 			if (a[i] != b[j]) {
 				return false;
 			}
-			else {
-				i--;
-				j--;
-			}
-			
+			i--;
+			j--;
 			
 		}
 		
 		
-		return (i == -1 && j == -1) ? true : false;
+		return (i == 0 && j == 0) ? true : false;
 	}
 
 }
