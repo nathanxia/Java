@@ -1,6 +1,6 @@
-package Apple;
+package general;
 
-public class numberOfOneBit {
+public class deleteContinueSpace {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
