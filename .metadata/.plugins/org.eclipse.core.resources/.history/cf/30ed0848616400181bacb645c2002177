@@ -1,0 +1,20 @@
+package unitTestingExample;
+
+public class findMaxValue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static int findMax(int[] arr) {
+		int max = -Integer.MAX_VALUE;
+		
+		for (int val : arr) {
+			if (val > max) max = val;
+		}
+		
+		return max;
+	}
+
+}

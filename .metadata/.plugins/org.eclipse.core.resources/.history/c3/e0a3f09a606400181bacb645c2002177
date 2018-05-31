@@ -1,0 +1,19 @@
+package unitTestingExample;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+
+public class findMaxTest {
+	
+	
+	@Test
+	public void testNullArr() {
+		int[] arr = {-1,99,-2,-90, 289,99,999};
+		
+		int res = findMaxValue.findMax(arr);
+		
+		Assert.assertEquals(999, res);
+	}
+
+}
